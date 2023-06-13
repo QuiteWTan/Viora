@@ -7,8 +7,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        'lora': ["Lora'", "serif"],
         'poppins': ['Poppins', 'sans-serif'],
-      },
+        'montserrat': ['Montserrat', 'sans-serif'],
+        'play': ['Playfair Display', 'serif'],
+        'caveat': ['Caveat', 'cursive']
+      }
     },
   },
   plugins: [],
