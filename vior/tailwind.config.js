@@ -12,6 +12,9 @@ export default {
         'montserrat': ['Montserrat', 'sans-serif'],
         'play': ['Playfair Display', 'serif'],
         'caveat': ['Caveat', 'cursive']
+      },
+      transitionProperty: {
+        'height': 'height',
       }
     },
   },
