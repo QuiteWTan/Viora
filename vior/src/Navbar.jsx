@@ -31,7 +31,7 @@ const Navbar = () => {
     }
     
     const MenuStyle = ['flex flex-col mx-7 px-5 my-1 py-2 gap-y-1 border-gray-400 border-l-2 h-0 hidden ','flex flex-col mx-7 px-5 my-1 py-2 gap-y-1 border-gray-400 border-l-2 h-auto ']
-    const NavStyle = ['fixed top-0 left-0 h-full w-[250px] bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300 delay-400 ','fixed top-0 left-0 h-full w-[73px] bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300']
+    const NavStyle = ['sticky w-[300px] top-0 left-0 h-screen bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300 ','sticky top-0 left-0 h-full w-[73px] h-screen bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300']
 
     const NavListTop = [
     {   
@@ -89,10 +89,10 @@ const Navbar = () => {
 
     return(
         <nav className={MenuIcon ? NavStyle[0] : NavStyle[1] }>
-            <header className='flex flex-col relative h-full'>
+            <header className='flex flex-col h-full'>
                 <div className='flex justify-between'>
-                    <div className='flex flex-row items-center px-2 py-2'>
-                        <box-icon type='solid' name='cube' size="lg"></box-icon>
+                    <div className='flex flex-row items-center px-2 py-2 '>
+                        <box-icon type='solid' name='cookie' size ="lg"></box-icon>
                         <h1 className={'font-play text-4xl font-bold px-2 text-black'}>{MenuIcon ? 'Vior' : ''}</h1>
                     </div>
                     <div onClick={() => ClearDropDown()}>
@@ -127,7 +127,7 @@ const Navbar = () => {
                                 <div className='flex flex-row justify-between items-center py-3 px-4 group'>
                                     <Link to={Nav.link} className='flex flex-row gap-x-4'>
                                         {Nav.icon}
-                                        <h2 style={{transitionDelay:`${index+3}00ms`}} className={`whitespace-pre  ${MenuIcon? 'duration-500 opacity-100 translate-x-0' : 'opacity-0 translate-x-28 overflow-hidden w-0 duration-0'}`}>{Nav.name}</h2>
+                                        <h2 style={{transitionDelay:`${index+2}00ms`}} className={`whitespace-pre  ${MenuIcon? 'duration-500 opacity-100 translate-x-0' : 'opacity-0 translate-x-28 overflow-hidden w-0 duration-0 delay-0'}`}>{Nav.name}</h2>
                                         
                                         <h2 className={MenuIcon? 'hidden' : 'w-0 overflow-hidden absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-sm drop-shadow-lg px-0 py-0 group-hover:px-2 group-hover:py-1 group-hover:left-16 duration-300 group-hover:w-auto'}>{Nav.HoverName}</h2>
                                     </Link>
