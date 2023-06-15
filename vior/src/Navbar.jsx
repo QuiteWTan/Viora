@@ -18,13 +18,26 @@ const Navbar = () => {
           }
         setSubMenu(updatedList);
     }
+
+    const ClearDropDown = (index) => {
+        setMenuIcon(!MenuIcon)
+        const updatedList = [...SubMenuList];
+        for (let i = 0; i < SubMenuList.length; i++) {
+            if (!updatedList[i]) {
+                updatedList[i] = !updatedList[i];
+            }
+          }
+        setSubMenu(updatedList);
+    }
+    
     const MenuStyle = ['flex flex-col mx-7 px-5 my-1 py-2 gap-y-1 border-gray-400 border-l-2 h-0 hidden ','flex flex-col mx-7 px-5 my-1 py-2 gap-y-1 border-gray-400 border-l-2 h-auto ']
-    const NavStyle = ['fixed top-0 left-0 h-full w-[250px] bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300 delay-400 overflow-hidden','fixed top-0 left-0 h-full w-[73px] bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300']
+    const NavStyle = ['fixed top-0 left-0 h-full w-[250px] bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300 delay-400 ','fixed top-0 left-0 h-full w-[73px] bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300']
 
     const NavListTop = [
     {   
         icon: <box-icon type='solid' name='grid-alt'></box-icon> ,
         name : "Home"        ,
+        HoverName : "Home",
         link:"/"
     },
         {
@@ -32,6 +45,7 @@ const Navbar = () => {
             name : "Products"    ,
             link:"/",
             Type:true, 
+            HoverName : "Products",
             Sub1: "Kost", 
             Sub2: "Apartment",
             Sub3 : "Rent House", 
@@ -44,6 +58,7 @@ const Navbar = () => {
             name : "About"       ,
             link:"/",
             Type:true, 
+            HoverName : "About" ,
             Sub1: "Instagram", 
             Sub2: "Twitter",
             Sub3 : "Facebook", 
@@ -55,6 +70,7 @@ const Navbar = () => {
             name : "Resources"   ,
             link:"/",
             Type:true, 
+            HoverName : "Resources" ,
             Sub1: "Affiliate", 
             Sub2: "Help Center",
             Sub3 : "Contact",
@@ -66,6 +82,7 @@ const Navbar = () => {
         {
             icon: <box-icon name='category' ></box-icon> ,
             name : "Categories"     ,
+            HoverName : "Categories",
             link:"/"
         }
     ]
@@ -76,10 +93,15 @@ const Navbar = () => {
                 <div className='flex justify-between'>
                     <div className='flex flex-row items-center px-2 py-2'>
                         <box-icon type='solid' name='cube' size="lg"></box-icon>
-                        <h1 className='font-play text-4xl font-bold px-2 text-black'>{MenuIcon ? 'Vior' : ''}</h1>
+                        <h1 className={'font-play text-4xl font-bold px-2 text-black'}>{MenuIcon ? 'Vior' : ''}</h1>
                     </div>
-                    <div onClick={() => setMenuIcon(!MenuIcon)}>
-                        {MenuIcon ? <box-icon name='x'></box-icon> : <box-icon name='menu' ></box-icon>}
+                    <div onClick={() => ClearDropDown()}>
+                        {
+                        MenuIcon ? 
+                        <box-icon name='x'></box-icon> 
+                        : 
+                        <box-icon name='menu' ></box-icon>
+                        }
                     </div>
                 </div>
                 <div className='mt-4 py-3 border-solid border-gray-300 border-b-2 px-1'>
@@ -89,6 +111,7 @@ const Navbar = () => {
                         <box-icon name='search-alt-2' className="p-2"></box-icon> :
                         <box-icon name='search-alt-2' animation='tada' className="p-2"></box-icon> 
                         }
+
                         {
                         MenuIcon ? 
                         <input type="text" placeholder='Search' className=' rounded-sm outline-none w-full bg-transparent text-black px-2'/> 
@@ -100,13 +123,16 @@ const Navbar = () => {
                 <div className='flex flex-col justify-between h-full '>
                     <div className='py-3 flex flex-col'>
                         {NavListTop.map((Nav, index) => (
-                            <div key={index} className=' hover:bg-slate-200 rounded-md transition ease-in-out duration-500 overflow-hidden py-1'>
-                                <div className='flex flex-row justify-between items-center py-3 px-4'>
-                                    <Link to={Nav.link} className='flex flex-row gap-x-4  '>
+                            <div key={index} className=' hover:bg-slate-200 rounded-md transition ease-in-out duration-500 py-1'>
+                                <div className='flex flex-row justify-between items-center py-3 px-4 group'>
+                                    <Link to={Nav.link} className='flex flex-row gap-x-4'>
                                         {Nav.icon}
-                                        <p>{Nav.name}</p>
+                                        <h2 style={{transitionDelay:`${index+3}00ms`}} className={`whitespace-pre  ${MenuIcon? 'duration-500 opacity-100 translate-x-0' : 'opacity-0 translate-x-28 overflow-hidden w-0 duration-0'}`}>{Nav.name}</h2>
+                                        
+                                        <h2 className={MenuIcon? 'hidden' : 'w-0 overflow-hidden absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-sm drop-shadow-lg px-0 py-0 group-hover:px-2 group-hover:py-1 group-hover:left-16 duration-300 group-hover:w-auto'}>{Nav.HoverName}</h2>
                                     </Link>
-                                    {Nav.Type? <box-icon name='chevron-down' onClick={() => DropDown(index-1)}></box-icon> : ''}
+                                    {Nav.Type? 
+                                    <box-icon name={SubMenuList[index-1]? 'chevron-down' : 'chevron-up'} onClick={() => DropDown(index-1)}></box-icon> : ''}
                                 </div>
                                 {
                                     MenuIcon?
