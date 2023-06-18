@@ -1,4 +1,3 @@
-import LogoB from '../src/assets/VectorB.png'
 import 'boxicons';
 import { useState } from 'react';
 import { Link} from 'react-scroll'
@@ -31,7 +30,7 @@ const Navbar = () => {
     }
     
     const MenuStyle = ['flex flex-col mx-7 px-5 my-1 py-2 gap-y-1 border-gray-400 border-l-2 h-0 hidden ','flex flex-col mx-7 px-5 my-1 py-2 gap-y-1 border-gray-400 border-l-2 h-auto ']
-    const NavStyle = ['sticky w-[300px] top-0 left-0 h-screen bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300 ','sticky top-0 left-0 h-full w-[73px] h-screen bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300']
+    const NavStyle = ['fixed md:sticky w-[300px] top-0 left-0 h-screen bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300 bg-white','fixed md:sticky top-0 left-[-73px] h-full w-[73px] h-screen bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300 bg-white']
 
     const NavListTop = [
     {   
@@ -46,9 +45,10 @@ const Navbar = () => {
             link:"/",
             Type:true, 
             HoverName : "Products",
-            Sub1: "Kost", 
-            Sub2: "Apartment",
-            Sub3 : "Rent House", 
+            Sub1: "Living room", 
+            Sub2: "Bath room",
+            Sub3 : "Bed room",
+            Sub4 : "Dining room", 
             Sub1Link:"/",
             Sub2Link:"/",
             Sub3Link:"/"
@@ -71,18 +71,20 @@ const Navbar = () => {
             link:"/",
             Type:true, 
             HoverName : "Resources" ,
-            Sub1: "Affiliate", 
-            Sub2: "Help Center",
-            Sub3 : "Contact",
-            Sub4:"Services", 
+            Sub1: "Help Center",
+            Sub2 : "blog",
+            Sub3:"Newsletter", 
             Sub1Link:"/",
             Sub2Link:"/",
             Sub3Link:"/",
             Sub4Link: "/"},
         {
             icon: <box-icon name='category' ></box-icon> ,
-            name : "Categories"     ,
+            name : "Others" ,
+            Type:true,    
             HoverName : "Categories",
+            Sub1: "Terms & Policy",
+            Sub2 : "Promo",
             link:"/"
         }
     ]
@@ -95,6 +97,7 @@ const Navbar = () => {
                         <box-icon type='solid' name='cookie' size ="lg"></box-icon>
                         <h1 className={'font-play text-4xl font-bold px-2 text-black'}>{MenuIcon ? 'Vior' : ''}</h1>
                     </div>
+                    
                     <div onClick={() => ClearDropDown()}>
                         {
                         MenuIcon ? 

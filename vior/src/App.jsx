@@ -1,15 +1,18 @@
 import { useState } from 'react'
 import Navbar from './Navbar'
-import SContent from './HomePage'
-function App() {
-  const [count, setCount] = useState(0)
+import HomePage from '../src/HomePage/HomePage'
+import TopUtil from './TopUtil'
+import { BrowserRouter as Router, Routes,Route} from 'react-router-dom';
 
+const App = () => {
   return (
-    <div className='flex flex-row'>
-      <Navbar/>
-      <SContent/>
-    </div>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        {/* Add more routes here */}
+      </Routes>
+    </Router>
+  );
+};
 
 export default App
