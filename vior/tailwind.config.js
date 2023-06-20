@@ -11,7 +11,8 @@ export default {
         'poppins': ['Poppins', 'sans-serif'],
         'montserrat': ['Montserrat', 'sans-serif'],
         'play': ['Playfair Display', 'serif'],
-        'caveat': ['Caveat', 'cursive']
+        'caveat': ['Caveat', 'cursive'],
+        'Robot': ['Roboto', 'sans-serif']
       },
       transitionProperty: {
         'height': 'height',

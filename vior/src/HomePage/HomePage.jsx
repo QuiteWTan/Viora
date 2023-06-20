@@ -1,5 +1,6 @@
 import Navbar from '../Navbar'
 import HomeContent from './HomeContent';
+import LoginPage from '../LoginPage/LoginPage';
 
 const HomePage = () => {
     return(

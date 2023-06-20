@@ -4,8 +4,8 @@ import { Link} from 'react-scroll'
 import Profile from '../src/assets/Profile.png'
 
 const Navbar = () => {
-    const [MenuIcon,setMenuIcon] = useState(true);
-    const [SubMenuList, setSubMenu] = useState([true,true,true]);
+    const [MenuIcon,setMenuIcon] = useState(false);
+    const [SubMenuList, setSubMenu] = useState([false,false,false,false]);
 
     const DropDown = (index) => {
         const updatedList = [...SubMenuList];
@@ -30,7 +30,7 @@ const Navbar = () => {
     }
     
     const MenuStyle = ['flex flex-col mx-7 px-5 my-1 py-2 gap-y-1 border-gray-400 border-l-2 h-0 hidden ','flex flex-col mx-7 px-5 my-1 py-2 gap-y-1 border-gray-400 border-l-2 h-auto ']
-    const NavStyle = ['fixed md:sticky w-[300px] top-0 left-0 h-screen bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300 bg-white','fixed md:sticky top-0 left-[-73px] h-full w-[73px] h-screen bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300 bg-white']
+    const NavStyle = ['fixed z-10 w-[300px] top-0 left-0 h-screen bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300 bg-white','fixed top-0 z-10 left-[-73px] md:left-0 h-full w-[73px] h-screen bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300 bg-white']
 
     const NavListTop = [
     {   
@@ -64,7 +64,8 @@ const Navbar = () => {
             Sub3 : "Facebook", 
             Sub1Link:"/",
             Sub2Link:"/",
-            Sub3Link:"/"},
+            Sub3Link:"/"
+        },
         {
             icon: <box-icon type='solid' name='inbox'></box-icon> ,
             name : "Resources"   ,
@@ -81,11 +82,11 @@ const Navbar = () => {
         {
             icon: <box-icon name='category' ></box-icon> ,
             name : "Others" ,
+            link:"/",
             Type:true,    
             HoverName : "Categories",
             Sub1: "Terms & Policy",
             Sub2 : "Promo",
-            link:"/"
         }
     ]
 
