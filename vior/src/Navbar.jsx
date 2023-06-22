@@ -154,11 +154,13 @@ const Navbar = () => {
                     </div>
 
 
-                        <div className='flex flex-row gap-x-4 items-center border-gray-300 border-t-2 pt-3 px-2 overflow-hidden'>
-                            <img src={Profile} alt="" className='w-10 h-10 rounded-md'/>
-                            <div className='flex flex-col px-1'>
-                                <h1 className='text-sm font-bold'>Yayan</h1>
-                                <p className='text-xs'>yayan123@gmail.com</p>
+                        <div className='flex flex-row gap-x-4 items-center border-gray-300 border-t-2 pt-3 px-2 overflow-hidden justify-between'>
+                            <div className='flex flex-row gap-x-2 items-center'>
+                                <img src={Profile} alt="" className='w-10 h-10 rounded-md'/>
+                                <div className='flex flex-col px-1'>
+                                    <h1 className='text-sm font-bold'>Yayan</h1>
+                                    <p className='text-xs'>yayan123@gmail.com</p>
+                                </div>
                             </div>
                             <box-icon name='log-out' ></box-icon>
                         </div>
