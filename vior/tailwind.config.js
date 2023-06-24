@@ -14,8 +14,15 @@ export default {
         'caveat': ['Caveat', 'cursive'],
         'Robot': ['Roboto', 'sans-serif']
       },
-      transitionProperty: {
-        'height': 'height',
+
+      gridTemplateColumns: {
+
+        'feat': 'repeat(4, minmax(120px, 180px))',
+      },
+      gridTemplateRows: {
+        
+        'feat1': 'repeat(2, minmax(140px, 220px))',
+        'feat2': 'repeat(4, minmax(60px, 180px))'
       }
     },
   },
