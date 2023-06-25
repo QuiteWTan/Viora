@@ -26,9 +26,10 @@ const FifthHomeSection = () => {
         },
     ]
     return(
-        <div className='w-full lg:h-screen px-10 sm:px-20 flex justify-center items-center' name='ThirdHomeSection'>
-            <div className="max-w-[1000px] flex flex-col justify-center gap-y-10">
-                <h1 className="text-3xl font-bold font-Robot text-gray-700">From Our Blog</h1>
+        <div className='w-full lg:h-screen py-10 px-10 sm:px-20 grid grid-rows-1 justify-center items-center relative' name='FifthHomeSection'>
+            <div className="max-w-[1000px] flex flex-col justify-center gap-y-6">
+                <h3 className='text-xl text-gray-500'>News</h3>
+                <h1 className="text-3xl font-bold font-Robot text-gray-700">Latest From Our Blog</h1>
                 <div className="grid grid-cols-1 sm:grid-rows-none sm:grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-5">
                     {ThirdHomeList.map((Content,index) => (
                         <div className={`flex flex-col ${Content.AddedClass}`} key={index}>
@@ -43,6 +44,12 @@ const FifthHomeSection = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+            </div>
+            <div className='w-full flex justify-end items-end font-bold text-xl text-gray-500 font-Robot'>
+                <div className='flex items-center'>
+                    <h1>View More</h1>
+                    <box-icon name='chevrons-right' color='gray'></box-icon>
                 </div>
             </div>
             <HandleScroll Destination={'FirstHomeSection'}/>

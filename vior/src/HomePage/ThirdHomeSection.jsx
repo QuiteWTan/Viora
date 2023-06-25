@@ -87,25 +87,25 @@ const ThirdHomeSection = () => {
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'Bathroom',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'Bathroom',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'Bathroom',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'Bathroom',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
@@ -114,49 +114,49 @@ const ThirdHomeSection = () => {
     const LivingRoom = [
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'LivingRoom',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'LivingRoom',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'LivingRoom',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'LivingRoom',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'LivingRoom',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'LivingRoom',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'LivingRoom',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'LivingRoom',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
@@ -165,49 +165,49 @@ const ThirdHomeSection = () => {
     const Kitchen = [
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'Kitchen',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'Kitchen',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'Kitchen',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'Kitchen',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'Kitchen',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'Kitchen',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'Kitchen',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
         {
             Image:Blog1,
-            Name:'Chair',
+            Name:'Kitchen',
             BeforePrice:'Rp 600.000',
             AfterPrice:'Rp 450.000'
         },
@@ -232,15 +232,16 @@ const ThirdHomeSection = () => {
 
 
     const Category=['Bathroom','Bedroom','Livingroom','Kitchen']
+
     return(
-        <div className='w-full lg:h-screen py-24 md:px-20 flex justify-center items-center' name='ThirdHomeSection'>
+        <div className='w-full lg:h-screen py-24 md:px-20 flex flex-col justify-center items-center' name='ThirdHomeSection'>
             <div className='flex flex-col '>
-                <div className='max-w-[1000px] flex flex-col'>
+                <div className='max-w-[1100px] flex flex-col'>
                     <h1 className='text-3xl text-gray-600 font-bold'>Featured Products</h1>
                     <div className='flex flex-col gap-y-10 py-4'>
-                        <div className='flex flex-row gap-x-5 font-Robot text-lg'>
+                        <div className='grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-4 font-Robot text-lg'>
                             {Category.map((Cat,index) =>(
-                                <button key={index} onClick={() => Show(index)}>
+                                <button className='bg-slate-400 hover:bg-slate-600 text-white font-semibold py-2 px-4 rounded transition-all duration-300 transform hover:scale-105' key={index} onClick={() => Show(index)}>
                                     {Cat}
                                 </button>
                             ))}
@@ -270,7 +271,7 @@ const ThirdHomeSection = () => {
                     </div>
                 </div>
             </div>
-            <HandleScroll Destination='FourthHomeSection'/>
+            <HandleScroll Destination='FourthhHomeSection'/>
         </div>
     )
 }

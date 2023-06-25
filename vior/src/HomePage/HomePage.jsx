@@ -11,10 +11,10 @@ const HomePage = () => {
         <div className='flex flex-col'>
             <Navbar/>
             <FirstHomeSection/>
-            {/* <SecondHomeSection/>
+            <SecondHomeSection/>
             <ThirdHomeSection/>
             <FourthHomeSection/>
-            <FifthHomeSection/> */}
+            <FifthHomeSection/>
         </div>
     )
 }

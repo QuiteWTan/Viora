@@ -25,7 +25,7 @@ const SecondHomeSection = () => {
     },
     ]
     return(
-        <div className='w-full lg:h-screen py-24 md:px-20 flex flex-row  md:flex-col justify-center items-center relative' name='SecondHomeSection'>
+        <div className='w-full lg:h-screen py-12 md:px-20 flex flex-col justify-center items-center' name='SecondHomeSection'>
             <div className='flex flex-col '>
                 <div className='max-w-[1100px]  grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 p-4 gap-y-20 '>
                     <div className='flex flex-col justify-center px-5 md:pr-10 md:text-center pt-4 md:pt-0 col-span-1'>
@@ -43,12 +43,12 @@ const SecondHomeSection = () => {
                         </div>
                     </div>
 
-                    <div className='max-w-1/3 md:w-full pl-20 pt-10 relative text-center col-span-1'>
+                    <div className='w-full pl-20 pt-10 relative text-center col-span-1'>
                         <div className='relative w-full h-full z-7'>
                             <img src={LoginBG} alt=""  className='absolute w-full h-full'/>
                         </div>
                         <img src={Home2} alt=""  className='absolute top-[-5%] left-[0px] w-44 h-44 z-[-1]'/>
-                        <img src={Home2} alt=""  className='absolute bottom-[-60px] right-[-10%] w-44 h-44 z-8'/>
+                        <img src={Home2} alt=""  className='hidden md:block absolute bottom-[-60px] right-[-10%] w-44 h-44 z-8'/>
                     </div>
                 </div>
             </div>

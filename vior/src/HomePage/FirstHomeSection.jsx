@@ -12,7 +12,7 @@ const FirstHomeSection = () => {
                 <div>
                     <h1 className='text-xl md:text-3xl text-left mt-10'>―― Find Your <span className='font-bold text-slate-700'>Furniture </span></h1>
                 </div>
-                <div className='max-w-[1100px] grid grid-rows-2 sm:grid-cols-2 md:grid-rows-none md:grid-cols-2 gap-x-3 lg:gap-x-10 items-center gap-y-3 py-12 mb-10'>
+                <div className='max-w-[1100px] grid grid-rows-2 sm:grid-cols-2 md:grid-rows-none md:grid-cols-2 gap-x-3 lg:gap-x-10 items-center gap-y-3 pt-4 mb-10'>
 
                     <div className='w-full h-full grid grid-cols-4 grid-rows-4 overflow-hidden col-span-2 md:col-span-1 gap-x-3 lg:gap-x-10'>
                         <div className='border-t-2 border-l-2 border-gray-400 p-3 col-span-2 flex flex-col justify-center items-center'>
@@ -87,8 +87,9 @@ const FirstHomeSection = () => {
                         </div>
                     </div> */}
                 </div>
+                <HandleScroll Destination="SecondHomeSection"/>
             </div>
-            <HandleScroll Destination="SecondHomeSection"/>
+            
         </div>
     )
 }

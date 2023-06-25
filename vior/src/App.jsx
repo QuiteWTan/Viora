@@ -15,6 +15,7 @@ const App = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/test" element={<ParentComponent />} />
+        <Route path="/product" element={<ParentComponent />} />
       </Routes>
     </Router>
   );

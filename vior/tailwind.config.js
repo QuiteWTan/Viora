@@ -17,15 +17,17 @@ export default {
 
       gridTemplateColumns: {
 
-        'feat': 'repeat(4, minmax(120px, 180px))',
+        'feat': 'repeat(4, minmax(120px, 200px))',
       },
       gridTemplateRows: {
         
-        'feat1': 'repeat(2, minmax(140px, 220px))',
-        'feat2': 'repeat(4, minmax(60px, 180px))'
+        'feat1': 'repeat(2, minmax(140px, 230px))',
+        'feat2': 'repeat(4, minmax(60px, 220px))'
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ]
 }
 
