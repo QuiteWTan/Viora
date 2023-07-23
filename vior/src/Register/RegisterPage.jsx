@@ -1,9 +1,10 @@
 import LoginBG from '../assets/Login/LoginBG.jpg'
 import { useState } from 'react';
 import AnimatedInput from '../FormComponent/AnimatedInput';
+import { useNavigate } from 'react-router';
 
-const RegisterPage = ( ) => {
-
+const RegisterPage = () => {
+    const Nav = useNavigate()
     return(
         <div className="w-full h-screen grid grid-cols-2 bg-slate-50">
             <div className='w-full relative'>
@@ -35,7 +36,7 @@ const RegisterPage = ( ) => {
                         <AnimatedInput type={'text'} name='Address' iconName='building-house'/>
                     </div>
                     <div className='flex flex-row justify-center items-center col-span-2'>
-                        <button className='py-2 px-16 text-center max-w-[400px] bg-slate-300 rounded-md font-bold text-gray-500 hover:bg-slate-400 duration-300 transition-color hover:text-gray-700 '>
+                        <button className='py-2 px-16 text-center max-w-[400px] bg-slate-300 rounded-md font-bold text-gray-500 hover:bg-slate-400 duration-300 transition-color hover:text-gray-700 ' onClick={() => Nav('/login')}>
                             Register
                         </button>
                     </div>
@@ -57,7 +58,7 @@ const RegisterPage = ( ) => {
                         </div>
                     </div>
                     <div className='text-xs text-gray-500 w-full text-center col-span-2'>
-                        <h1>Already have an account? <a href="" className='font-bold underline'>Sign In now.</a></h1>
+                        <h1>Already have an account? <a href="" className='font-bold underline' onClick={() => Nav('/login')}>Sign In now.</a></h1>
                     </div>
                 </div>
             </div>

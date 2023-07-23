@@ -12,17 +12,18 @@ export default {
         'montserrat': ['Montserrat', 'sans-serif'],
         'play': ['Playfair Display', 'serif'],
         'caveat': ['Caveat', 'cursive'],
-        'Robot': ['Roboto', 'sans-serif']
+        'Robot': ['Roboto', 'sans-serif'],
+        'ysa': ['Ysabeau Office', 'sans-serif']
       },
 
       gridTemplateColumns: {
 
-        'feat': 'repeat(4, minmax(120px, 200px))',
+        'feat': 'repeat(4, minmax(150px, 250px))',
       },
       gridTemplateRows: {
         
-        'feat1': 'repeat(2, minmax(140px, 230px))',
-        'feat2': 'repeat(4, minmax(60px, 220px))'
+        'feat1': 'repeat(2, minmax(150px, 280px))',
+        'feat2': 'repeat(4, minmax(90px, 240px))'
       }
     },
   },

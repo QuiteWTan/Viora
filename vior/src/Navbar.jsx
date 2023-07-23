@@ -2,8 +2,10 @@ import 'boxicons';
 import { useState } from 'react';
 import { Link} from 'react-scroll'
 import Profile from '../src/assets/Profile.png'
+import {  useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+    const Nav = useNavigate();
     const [MenuIcon,setMenuIcon] = useState(false);
     const [SubMenuList, setSubMenu] = useState([false,false,false,false]);
 
@@ -41,10 +43,10 @@ const Navbar = () => {
     },
         {
             icon: <box-icon name='buildings'></box-icon> ,
-            name : "Products"    ,
+            name : "Shop"    ,
             link:"/",
             Type:true, 
-            HoverName : "Products",
+            HoverName : "Shop",
             Sub1: "Living room", 
             Sub2: "Bath room",
             Sub3 : "Bed room",
@@ -162,7 +164,7 @@ const Navbar = () => {
                                     <p className='text-xs'>yayan123@gmail.com</p>
                                 </div>
                             </div>
-                            <box-icon name='log-out' ></box-icon>
+                            <box-icon name='log-out' onClick ={()=> Nav('/login')}></box-icon>
                         </div>
                     </div>
 

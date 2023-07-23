@@ -1,8 +1,10 @@
 import LoginBG from '../assets/Login/LoginBG.jpg'
 import React, { useState } from 'react';
 import AnimatedInput from '../FormComponent/AnimatedInput';
+import { useNavigate } from 'react-router';
 
 const LoginPage = () => {
+    const Nav = useNavigate();
     const [formValues, setFormValues] = useState({
         email: '',
         password:''
@@ -72,7 +74,7 @@ const LoginPage = () => {
                             <h1>Having troubles signing in? <a href="" className='font-bold underline'>contact here</a></h1>
                         </div>
 
-                        <button className='py-2 px-6 text-center w-full bg-slate-300 rounded-md font-bold text-gray-500 hover:bg-slate-400 duration-300 transition-color hover:text-gray-700'>
+                        <button className='py-2 px-6 text-center w-full bg-slate-300 rounded-md font-bold text-gray-500 hover:bg-slate-400 duration-300 transition-color hover:text-gray-700' onClick={() => Nav('/')}>
                             Sign In
                         </button>
 
@@ -99,7 +101,7 @@ const LoginPage = () => {
                             </div>
                         </div>
                         <div className='text-xs text-gray-500 w-full text-center'>
-                            <h1>Don't have an account? <a href="" className='font-bold underline'>Register now</a></h1>
+                            <h1>Don't have an account? <button href="" className='font-bold underline' onClick={() => Nav('/register')}>Register now</button></h1>
                         </div>
                     </form>
                 </div>

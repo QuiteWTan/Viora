@@ -236,7 +236,7 @@ const ThirdHomeSection = () => {
     return(
         <div className='w-full lg:h-screen py-24 md:px-20 flex flex-col justify-center items-center' name='ThirdHomeSection'>
             <div className='flex flex-col '>
-                <div className='max-w-[1100px] flex flex-col'>
+                <div className='max-w-[1300px] flex flex-col'>
                     <h1 className='text-3xl text-gray-600 font-bold'>Featured Products</h1>
                     <div className='flex flex-col gap-y-10 py-4'>
                         <div className='grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-4 font-Robot text-lg'>
@@ -271,7 +271,7 @@ const ThirdHomeSection = () => {
                     </div>
                 </div>
             </div>
-            <HandleScroll Destination='FourthhHomeSection'/>
+            <HandleScroll Destination='FourthHomeSection'/>
         </div>
     )
 }

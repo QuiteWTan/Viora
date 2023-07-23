@@ -1,7 +1,9 @@
 import Blog1 from '../assets/Home/Content2.jpg'
 import { HandleScroll } from './HandleScroll'
+import {  useNavigate } from "react-router-dom";
 
 const FifthHomeSection = () => { 
+    const Nav = useNavigate();
     const ThirdHomeList = [
         {
             Image: Blog1,
@@ -47,7 +49,7 @@ const FifthHomeSection = () => {
                 </div>
             </div>
             <div className='w-full flex justify-end items-end font-bold text-xl text-gray-500 font-Robot'>
-                <div className='flex items-center'>
+                <div className='flex items-center' onClick={() => Nav('product')}>
                     <h1>View More</h1>
                     <box-icon name='chevrons-right' color='gray'></box-icon>
                 </div>
