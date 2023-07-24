@@ -22,7 +22,7 @@ export default {
       },
       gridTemplateRows: {
         
-        'feat1': 'repeat(2, minmax(150px, 280px))',
+        'feat1': 'repeat(2, minmax(160px, 300px))',
         'feat2': 'repeat(4, minmax(90px, 240px))'
       }
     },

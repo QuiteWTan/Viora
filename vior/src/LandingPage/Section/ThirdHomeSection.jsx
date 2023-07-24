@@ -234,7 +234,7 @@ const ThirdHomeSection = () => {
     const Category=['Bathroom','Bedroom','Livingroom','Kitchen']
 
     return(
-        <div className='w-full lg:h-screen py-24 md:px-20 flex flex-col justify-center items-center' name='ThirdHomeSection'>
+        <div className='w-full py-12 md:px-20 flex flex-col justify-center items-center bg-slate-100' name='ThirdHomeSection'>
             <div className='flex flex-col '>
                 <div className='max-w-[1300px] flex flex-col'>
                     <h1 className='text-3xl text-gray-600 font-bold'>Featured Products</h1>

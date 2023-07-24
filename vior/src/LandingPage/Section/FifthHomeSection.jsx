@@ -34,11 +34,11 @@ const FifthHomeSection = () => {
                 <h1 className="text-3xl font-bold font-Robot text-gray-700">Latest From Our Blog</h1>
                 <div className="grid grid-cols-1 sm:grid-rows-none sm:grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-5">
                     {ThirdHomeList.map((Content,index) => (
-                        <div className={`flex flex-col ${Content.AddedClass}`} key={index}>
-                            <div className='w-full max-h-[200px] relative overflow-hidden'>
+                        <div className={`flex flex-col ${Content.AddedClass} shadow-xl rounded-md overflow-hidden`} key={index}>
+                            <div className='w-full max-h-[200px] relative overflow-hidden r'>
                                 <img src={Content.Image} alt="absolute w-full h-full" />
                             </div>
-                            <div className='py-4 flex flex-col gap-y-1'>
+                            <div className='py-4 flex flex-col gap-y-1 px-2'>
                                 <h3 className='text-sm text-gray-400'>{Content.Date}</h3>
                                 <h1 className='font-bold text-gray-600'>{Content.Title}</h1>
                                 <p className='text-xs text-gray-600'>{Content.Desc}</p>
