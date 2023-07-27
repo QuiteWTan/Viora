@@ -1,10 +1,10 @@
 import { createContext, useReducer, useContext } from "react";
 import faker from 'faker'
 import { cartReducer } from "./Reducer";
-import { bathroomFurniture } from "./FurnitureData";
+import { BathroomFurnitureData} from "./FurnitureData";
 
 const Cart = createContext();
-const Data = bathroomFurniture;
+const Data = BathroomFurnitureData;
 
 const Context = ({children}) => {
     const [state, dispatch] = useReducer(cartReducer,{
