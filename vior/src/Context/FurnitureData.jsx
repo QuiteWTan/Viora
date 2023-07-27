@@ -52,4 +52,31 @@ const getData = (furnitureValue) =>{
     }
 }
 
+
+const fetchDataAPI = () =>{
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await axios.get(
+              'https://api.escuelajs.co/api/v1/products/',
+              {
+                params: {
+                  price_min: 100,
+                  price_max: 1000,
+                  offset: 10,
+                  limit: 10,
+                },
+              }
+            );
+    
+            setProducts(response.data);
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+    
+        fetchData();
+      }, []);
+}
+
 export default getData;
