@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Rating from './Category/Rating';
 
 const CategorySection = () => {
     const CategoryList = [
@@ -34,22 +35,28 @@ const CategorySection = () => {
         setActive(activeList);
     }
 
+    const [rating,setRating] = useState(0);
+    
     return(
         <div className="flex flex-row gap-4 font-poppins py-4 text-slate-500 text-sm items-center">
             <div>
-                <h1 className=" text-gray-400">Filter Category</h1>
+                <h1 className=" text-gray-400">Filter Category : </h1>
             </div>
             <div className="flex flex-row gap-x-8">
                 {
                     CategoryList .map((Category,index) => (
                         <div key={index}>
-                            <div className="flex flex-row items-center gap-x-2">
-                                <div className= {`p-2 w-2 h-2 border-2 border-gray-400 rounded-md ${active[index]}`} onClick={() => SetType(index)}></div>
+                            <div className="flex flex-row items-center gap-x-2 text-sm">
+                                <div className= {`p-1 w-2 h-2 border-2 border-gray-400 rounded-md ${active[index]}`} onClick={() => SetType(index)}></div>
                                 <h1>{Category.Name}</h1>
                             </div>
                         </div>
                     ))
                 }
+                <div className="flex flex-row gap-x-2">
+                    <h1>Ratings : </h1>
+                    <Rating Ratings={rating} onClick={(i) => setRating(i+1)}/>
+                </div>
             </div>
         </div>
     )

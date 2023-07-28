@@ -4,7 +4,7 @@ import ProductList from "./ProductList"
 
 const ProductSection = () => {
     return(
-        <div className="flex flex-row max-w-[1300px] justify-center py-2 gap-x-6">
+        <div className="flex flex-row max-w-[1200px] justify-center py-2 gap-x-6">
             <div>
                 <FurnitureType />
                 <CategorySection/>
