@@ -25,8 +25,8 @@ const ShopNavbar = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-full md:hidden flex justify-center px-8">
-                    <div className="flex flex-row items-center justify-center bg-white rounded-full w-full sm:w-5/6 px-3 py-4 md:py-2 border-gray-400 border">
+                <div className="w-full md:hidden flex justify-center px-8 py-2">
+                    <div className="flex flex-row items-center justify-center bg-white rounded-full w-full sm:w-5/6 px-3 py-3 border-gray-400 border">
                         <div className="border-gray-400 border-r flex items-center justify-center px-1">
                             <box-icon name='search-alt-2' className color='gray'></box-icon>
                         </div>

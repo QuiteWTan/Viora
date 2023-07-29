@@ -1,25 +1,18 @@
-const Rating = ({Ratings,onClick}) => {
-    let Valid = true;
-    const CheckRating = (i) => {
-        const [tempRating, setTempRating] = useState(0)
-        if(tempRating === Ratings){
-            Valid =  false;
-        }else{
-            Valid = true;
-        }
-        setTempRating(Ratings)
-        onClick(i)
-    }
+import { useState } from "react";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+
+const Rating = ({Ratings,Valid,Color}) => {
+    
     return(
-        <div>
+        <div className='flex flex-row items-center text-xs md:text-sm lg:text-md'>
             {[...Array(5)].map((_,i) => (
-                <span key={i} onClick={() => CheckRating(i)}>
+                <span key={i}>
                     { Valid ? 
                         Ratings > i ? 
-                            (<box-icon type='solid' name='star' size='17px' ></box-icon> )
+                            (<AiFillStar color={Color} /> )
                                 : 
-                                (<box-icon name='star' size='17px'></box-icon>)
-                        : (<box-icon name='star' size='17px'></box-icon>)
+                                (<AiOutlineStar/>)
+                        :  (<AiOutlineStar/>)
                     }
 
                 </span>
