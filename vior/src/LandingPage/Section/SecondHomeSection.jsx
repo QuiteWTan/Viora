@@ -28,10 +28,10 @@ const SecondHomeSection = () => {
         <div className='w-full lg:h-screen py-12 md:px-20 flex flex-col justify-center items-center' name='SecondHomeSection'>
             <div className='flex flex-col '>
                 <div className='max-w-[1100px]  grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 p-4 gap-y-20 '>
-                    <div className='flex flex-col justify-center px-5 md:pr-10 md:text-center pt-4 md:pt-0 col-span-1'>
+                    <div className='flex flex-col justify-center px-2 md:px-5 md:pr-10 md:text-center pt-4 md:pt-0 col-span-1'>
                         <p className='text-lg text-left md:text-1xl lg:text-2xl font-Robot text-gray-800 font-bold'>Why Choose Us ?</p>
                         <p className='py-4 text-xs sm:text-sm  text-left max-w-[600px] font-Robot text-gray-400'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
-                        <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4'>
+                        <div className='grid grid-cols-2 gap-x-4 gap-y-4'>
                             {SecondHomeList.map((Content,index) =>(
                                 <div key={index} className='bg-slate-100 flex flex-col gap-y-1 px-3 py-3 lg:py-5 md:px-4 rounded-md shadow-md text-left text-gray-500' >
                                     {Content.icon}

@@ -6,6 +6,9 @@ import TopUtil from './TopUtil'
 import { BrowserRouter as Router, Routes,Route} from 'react-router-dom';
 import RegisterPage from './Register/RegisterPage'
 import ProductPage from './Product/ProductPage'
+import Blog from './ResourcesPage/BlogPage'
+import ProductInfo from './ProductInfo/ProductInfo'
+
 const App = () => {
   return (
     <Router>
@@ -13,8 +16,9 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-
         <Route path="/shop" element={<ProductPage />} />
+        <Route path="/blog" element = {<Blog/>}/>
+        <Route path="/product" element = {<ProductInfo/>}/>
       </Routes>
     </Router>
   );

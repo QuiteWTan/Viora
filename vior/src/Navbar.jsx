@@ -76,7 +76,6 @@ const Navbar = () => {
             HoverName : "Resources" ,
             Sub1: "Help Center",
             Sub2 : "blog",
-            Sub3:"Newsletter", 
             Sub1Link:"/",
             Sub2Link:"/",
             Sub3Link:"/",
@@ -93,7 +92,7 @@ const Navbar = () => {
     ]
 
     return(
-        <nav className={MenuIcon ? NavStyle[0] : NavStyle[1] }>
+        <nav className={MenuIcon ? NavStyle[0] : NavStyle[1] } >
             <header className='flex flex-col h-full'>
                 <div className='flex justify-between'>
                     <div className='flex flex-row items-center px-2 py-2 '>

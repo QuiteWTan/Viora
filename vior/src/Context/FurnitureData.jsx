@@ -415,7 +415,7 @@ export const BedroomFurnitureData = [
 export const LivingroomFurnitureData = [
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 1',
     Image:Product1,
     price: faker.commerce.price(), 
@@ -424,7 +424,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 2',
     Image:Product2,
     price: faker.commerce.price(), 
@@ -433,7 +433,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 3',
     Image:Product3,
     price: faker.commerce.price(), 
@@ -442,7 +442,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 4',
     Image:Product4,
     price: faker.commerce.price(), 
@@ -451,7 +451,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 5',
     Image:Product5,
     price: faker.commerce.price(), 
@@ -460,7 +460,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 6',
     Image:Product1,
     price: faker.commerce.price(), 
@@ -469,7 +469,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 7',
     Image:Product2,
     price: faker.commerce.price(), 
@@ -478,7 +478,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 8',
     Image:Product3,
     price: faker.commerce.price(), 
@@ -487,7 +487,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 9',
     Image:Product4,
     price: faker.commerce.price(), 
@@ -496,7 +496,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 10',
     Image:Product5,
     price: faker.commerce.price(), 
@@ -505,7 +505,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 11',
     Image:Product1,
     price: faker.commerce.price(), 
@@ -514,7 +514,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 12',
     Image:Product2,
     price: faker.commerce.price(), 
@@ -523,7 +523,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 13',
     Image:Product3,
     price: faker.commerce.price(), 
@@ -532,7 +532,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 14',
     Image:Product4,
     price: faker.commerce.price(), 
@@ -541,7 +541,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 15',
     Image:Product5,
     price: faker.commerce.price(), 
@@ -550,7 +550,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 16',
     Image:Product1,
     price: faker.commerce.price(), 
@@ -559,7 +559,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 17',
     Image:Product2,
     price: faker.commerce.price(), 
@@ -568,7 +568,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 18',
     Image:Product3,
     price: faker.commerce.price(), 
@@ -577,7 +577,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Name:'Chair 19',
     Image:Product4,
     price: faker.commerce.price(), 
@@ -586,7 +586,7 @@ export const LivingroomFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Livingroom',
     Type: 'Bathroom',
     Name:'Chair 20',
     Image:Product5,
@@ -600,7 +600,7 @@ export const LivingroomFurnitureData = [
 export const KitchenFurnitureData = [
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Kitchen',
     Name:'Chair 1',
     Image:Product1,
     price: faker.commerce.price(), 
@@ -609,7 +609,7 @@ export const KitchenFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Kitchen',
     Name:'Chair 2',
     Image:Product2,
     price: faker.commerce.price(), 
@@ -618,7 +618,7 @@ export const KitchenFurnitureData = [
   },
   {
     id: faker.datatype.uuid(),
-    Type: 'Bathroom',
+    Type: 'Kitchen',
     Name:'Chair 3',
     Image:Product3,
     price: faker.commerce.price(), 

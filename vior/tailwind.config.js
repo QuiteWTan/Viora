@@ -23,7 +23,8 @@ export default {
       gridTemplateRows: {
         
         'feat1': 'repeat(2, minmax(160px, 300px))',
-        'feat2': 'repeat(4, minmax(90px, 240px))'
+        'feat2': 'repeat(auto-fit, minmax(200px, 1fr))',
+        'auto' : 'grid-auto-rows: auto'
       }
     },
   },

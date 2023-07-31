@@ -1,4 +1,4 @@
-import { createContext, useReducer, useContext } from "react";
+import { createContext, useReducer, useContext, useState } from "react";
 import { cartReducer } from "./Reducer";
 import { BathroomFurnitureData, BedroomFurnitureData, LivingroomFurnitureData, KitchenFurnitureData } from "./FurnitureData";
 
@@ -9,48 +9,41 @@ const LivingroomContext = createContext();
 const KitchenContext = createContext();
 
 const BathroomProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(cartReducer, {
-    Bathfurniture: BathroomFurnitureData,
-  });
+  const [bathroomFurnitureData,setBathroomFurnitureData] =useState(BathroomFurnitureData)
 
   return (
-    <BathroomContext.Provider value={{ state, dispatch }}>
+    <BathroomContext.Provider value={{bathroomFurnitureData}}>
       {children}
     </BathroomContext.Provider>
   );
 };
 
 const BedroomProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(cartReducer, {
-    Bedfurniture: BedroomFurnitureData,
-  });
+  const [bedroomFurnitureData,setBedroomFurnitureData] =useState(BedroomFurnitureData)
+
 
   return (
-    <BedroomContext.Provider value={{ state, dispatch }}>
+    <BedroomContext.Provider value={{bedroomFurnitureData}}>
       {children}
     </BedroomContext.Provider>
   );
 };
 
 const LivingroomProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(cartReducer, {
-    Livingfurniture: LivingroomFurnitureData,
-  });
+  const [livingroomFurnitureData,setBedroomFurnitureData] =useState(LivingroomFurnitureData)
 
   return (
-    <LivingroomContext.Provider value={{ state, dispatch }}>
+    <LivingroomContext.Provider value={{livingroomFurnitureData}}>
       {children}
     </LivingroomContext.Provider>
   );
 };
 
 const KitchenProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(cartReducer, {
-    Kitchenfurniture: KitchenFurnitureData,
-  });
+  const [kitchenFurnitureData ,setBedroomFurnitureData] =useState(KitchenFurnitureData )
 
   return (
-    <KitchenContext.Provider value={{ state, dispatch }}>
+    <KitchenContext.Provider value={{kitchenFurnitureData}}>
       {children}
     </KitchenContext.Provider>
   );
@@ -58,7 +51,6 @@ const KitchenProvider = ({ children }) => {
 
 const CartProvider = ({ children }) => {
     const [state, dispatch] = useReducer(cartReducer, {
-      furniture: [],
       Cart: []
     });
   

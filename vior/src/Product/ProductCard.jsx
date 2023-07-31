@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Rating from './Category/Rating';
-
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({Product}) => {
-    const [products, setProducts] = useState([]);
+    const [product,setProduct] = useState(Product)
+    const dataToSend = 'Hello from Component A';
     return(
         <div className="flex flex-col shadow-xl rounded-md border">
             <img src={Product.Image} alt="" className='w-full h-[80%] p-2 border' style={{objectFit:"contain"}}/>
@@ -22,7 +23,9 @@ const ProductCard = ({Product}) => {
                     <h1 className={` font-bold ${Product.fastDelivery? 'text-green-600' : 'text-red-600'}`}>{Product.fastDelivery? 'Available' : 'Unavailable'}</h1>
                 </div>
                 <div className='py-4'>
-                    <button className='bg-slate-400 text-white w-full py-2 font-poppins rounded-md text-sm hover:bg-slate-600 transition-all duration-300'> View More</button>
+                    <Link to="/product" state={product}>
+                        <button className='bg-slate-400 text-white w-full py-2 font-poppins rounded-md text-sm hover:bg-slate-600 transition-all duration-300'> View More</button>
+                    </Link>
                 </div>
             </div>
         </div>
