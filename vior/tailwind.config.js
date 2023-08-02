@@ -25,7 +25,8 @@ export default {
         'feat1': 'repeat(2, minmax(160px, 300px))',
         'feat2': 'repeat(auto-fit, minmax(200px, 1fr))',
         'auto' : 'grid-auto-rows: auto'
-      }
+      },
+      
     },
   },
   plugins: [

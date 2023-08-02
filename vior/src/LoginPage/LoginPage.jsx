@@ -2,13 +2,13 @@ import LoginBG from '../assets/Login/LoginBG.jpg'
 import React, { useState } from 'react';
 import AnimatedInput from '../FormComponent/AnimatedInput';
 import { useNavigate } from 'react-router';
-
+import { Link } from 'react-router-dom';
+        
 const LoginPage = () => {
     const Nav = useNavigate();
     const [formValues, setFormValues] = useState({
         email: '',
         password:''
-
       });
     
       const handleSubmit = (e) => {
@@ -73,10 +73,12 @@ const LoginPage = () => {
                         <div className='text-xs px-1 text-gray-500'>
                             <h1>Having troubles signing in? <a href="" className='font-bold underline'>contact here</a></h1>
                         </div>
-
-                        <button className='py-2 px-6 text-center w-full bg-slate-300 rounded-md font-bold text-gray-500 hover:bg-slate-400 duration-300 transition-color hover:text-gray-700' onClick={() => Nav('/')}>
-                            Sign In
-                        </button>
+                        <Link to="/" state={true}>
+                            <button className='py-2 px-6 text-center w-full bg-slate-300 rounded-md font-bold text-gray-500 hover:bg-slate-400 duration-300 transition-color hover:text-gray-700' onClick={() => Nav('/')}>
+                                Sign In
+                            </button>
+                        </Link>
+                        
 
                         <div className='text-xs text-gray-500 w-full text-center flex flex-col justify-center items-center'>
                             <h1>――――  or Sign In With ――――  </h1>

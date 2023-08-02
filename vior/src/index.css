@@ -23,3 +23,4 @@ body{
   grid-auto-rows: repeat(auto-fit, minmax(200px, 1fr)); /* Rows will adjust based on the content */
   gap: 10px; /* Adjust the gap between grid items as needed */
 }
+

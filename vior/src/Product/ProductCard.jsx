@@ -4,8 +4,9 @@ import Rating from './Category/Rating';
 import { Link } from 'react-router-dom';
 
 const ProductCard = ({Product}) => {
+    const location = useLocation();
+    const receivedData = location.state;
     const [product,setProduct] = useState(Product)
-    const dataToSend = 'Hello from Component A';
     return(
         <div className="flex flex-col shadow-xl rounded-md border">
             <img src={Product.Image} alt="" className='w-full h-[80%] p-2 border' style={{objectFit:"contain"}}/>
@@ -18,9 +19,15 @@ const ProductCard = ({Product}) => {
                     <h1>{Product.Name}</h1>
                     <h1>$ {Product.price}</h1>
                 </div>
-                <div className='pt-6 font-poppins text-[12px]'>
-                    <h1 className='text-gray-400'>Fast Delivery:</h1>
-                    <h1 className={` font-bold ${Product.fastDelivery? 'text-green-600' : 'text-red-600'}`}>{Product.fastDelivery? 'Available' : 'Unavailable'}</h1>
+                
+                <div className='pt-6 font-poppins text-[12px] flex flex-row justify-between'>
+                    <div>
+                        <h1 className='text-gray-400'>Fast Delivery :</h1>
+                        <h1 className={` font-bold ${Product.fastDelivery? 'text-green-600' : 'text-red-600'}`}>{Product.fastDelivery? 'Available' : 'Unavailable'}</h1>
+                    </div>
+                    <div className='font-bold '>
+                        <h1 className='text-gray-400'>Stock : <span className='text-black font-Robot'>{Product.Stock}</span></h1>
+                    </div>
                 </div>
                 <div className='py-4'>
                     <Link to="/product" state={product}>
