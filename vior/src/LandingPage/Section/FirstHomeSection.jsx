@@ -5,7 +5,7 @@ import { HandleScroll } from './HandleScroll';
 
 const FirstHomeSection = () => {
     return(
-        <div className='w-full h-screen flex flex-col items-center justify-center bg-slate-100' name='FirstHomeSection'>
+        <div className='w-full flex flex-col items-center justify-center bg-slate-100' name='FirstHomeSection'>
             <div className='flex flex-col max-w-[1200px] py-24 px-4 md:px-20  '>
                 <div className='flex flex-col lg:flex-row gap-y-4 gap-x-8' >
                     
