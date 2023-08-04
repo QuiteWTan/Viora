@@ -1,17 +1,8 @@
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 
-const AnimatedInput = ({type,name,iconName,iconType,handleChange,values}) => {
-  const [formValues, setFormValues] = useState({
-    email: '',
-    password:''
-  });
-  
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    console.log(name)
-    handleChange(name, value);
-  };
+const AnimatedInput = ({type,name,iconName,iconType,handleChange,value}) => {
+
 
   const [isFocused, setIsFocused] = useState(false);
 
@@ -33,8 +24,8 @@ const AnimatedInput = ({type,name,iconName,iconType,handleChange,values}) => {
         className='focus:outline-none bg-transparent'
         onFocus={handleFocus}
         onBlur={handleBlur}
-        onChange={handleInputChange}
-        value={values}
+        onChange={(e) => handleChange(name, e.target.value)}
+        value={value}
       />
       <box-icon name={iconName} type={iconType}></box-icon>
       <div

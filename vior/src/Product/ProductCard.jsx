@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Rating from './Category/Rating';
 import { Link } from 'react-router-dom';
+import { CartState } from '../Context/Context';
 
 const ProductCard = ({Product}) => {
-    const location = useLocation();
-    const receivedData = location.state;
     const [product,setProduct] = useState(Product)
     return(
         <div className="flex flex-col shadow-xl rounded-md border">

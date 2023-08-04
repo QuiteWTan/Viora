@@ -60,6 +60,7 @@ const CartProvider = ({ children }) => {
       </Cart.Provider>
     );
   };
+  
 const Context = ({ children }) => {
   return (
     <BathroomProvider>

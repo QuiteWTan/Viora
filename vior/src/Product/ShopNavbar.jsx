@@ -1,4 +1,14 @@
+import { useEffect, useState } from "react";
+import { CartState } from "../Context/Context";
+
 const ShopNavbar = () => {
+    const {
+        state:{Cart},
+    } = CartState()
+    const[cartItem,setCartItem] = useState(0)
+    useEffect(() => {
+        setCartItem(Cart.length)
+      }, [Cart]);
     return(
         <>
             <header className="w-full flex flex-col shadow-md ">
@@ -17,7 +27,7 @@ const ShopNavbar = () => {
                         <div className="flex items-center gap-x-4">
                             <div className="rounded-full px-3 py-2 bg-white relative">
                                 <box-icon name='shopping-bag' ></box-icon>
-                                <div className="w-5 h-5 rounded-full p-1 bg-gray-400 absolute bottom-1 right-1 flex items-center justify-center text-white text-sm">0</div>
+                                <div className="w-4 h-4 rounded-full p-1 bg-gray-400 absolute bottom-2 right-2 flex items-center justify-center text-white text-[10px] font-bold">{cartItem}</div>
                             </div>
                             <div className="rounded-full px-3 py-2 bg-white">
                                 <box-icon name='user' ></box-icon>

@@ -23,9 +23,6 @@ const LandingPage = () => {
           toast.addEventListener('mouseleave', Swal.resumeTimer)
         }
       })
-      
-      
-
       const notLogin = Swal.mixin({
         toast: true,
         position: 'top-end',
