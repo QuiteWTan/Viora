@@ -13,11 +13,10 @@ const ProductSection = () => {
 
     const [activeBool, setActiveBool] = useState([true,false,false,false])
     const [active, setActive] = useState(['bg-slate-500 text-white','bg-gray-200','bg-gray-200','bg-gray-200'])
-    const furnitureList = [bathroomFurnitureData, bedroomFurnitureData, livingroomFurnitureData, kitchenFurnitureData];
-    const defaultFurnitureList = furnitureList.concat();
-    const [furniture, setFurniture] = useState(furnitureList);
+    const defaultFurnitureList = [bathroomFurnitureData, bedroomFurnitureData, livingroomFurnitureData, kitchenFurnitureData];
+    const [furniture, setFurniture] = useState([...defaultFurnitureList]);
 
-    const [activeCategory, setActiveCategory] = useState(['bg-gray-400','','','','',''])
+    const [activeCategory, setActiveCategory] = useState(['bg-gray-400','','','',''])
 
     const SetTypeCategory = (index) => {
         const activeList = [...activeCategory];
@@ -38,16 +37,27 @@ const ProductSection = () => {
 
     const FilterData = (index,i) => {
         if(index == 0){
-            console.log(bathroomFurnitureData)
-            setFurniture(defaultFurnitureList)
+            setFurniture([...defaultFurnitureList])
         }else if(index == 1){
-            const sortDescendFurniture = furnitureList[i].sort((a,b) => (a.price < b.price ? 1 : -1))
-            furnitureList[i] = sortDescendFurniture
-            setFurniture(furnitureList)
+            const updatedFurniture = [...furniture];
+            const sortDescendFurniture = updatedFurniture[i].sort((a,b) => (a.price < b.price ? 1 : -1))
+            updatedFurniture[i] = sortDescendFurniture
+            setFurniture(updatedFurniture)
         }else if(index == 2){
-            const sortAscendFurniture = furnitureList[i].sort((a,b) => (a.price > b.price ? 1 : -1))
-            furnitureList[i] = sortAscendFurniture
-            setFurniture(furnitureList)
+            const updatedFurniture = [...furniture];
+            const sortAscendFurniture = updatedFurniture[i].sort((a,b) => (a.price > b.price ? 1 : -1))
+            updatedFurniture[i] = sortAscendFurniture
+            setFurniture(updatedFurniture)
+        }if(index == 3 ){
+            const updatedFurniture = [...furniture];
+            const fastDeliveryFurniture = updatedFurniture[i].sort((a) => (a.fastDelivery ? -1 : 1))
+            updatedFurniture[i] = fastDeliveryFurniture
+            setFurniture(updatedFurniture)
+        }if(index == 4 ){
+            const updatedFurniture = [...furniture];
+            const HighestRatingFurniture = updatedFurniture[i].sort((a,b) => (a.ratings < b.ratings ? 1 : -1))
+            updatedFurniture[i] = HighestRatingFurniture
+            setFurniture(updatedFurniture)
         }
     }
 

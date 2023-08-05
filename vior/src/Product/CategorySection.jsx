@@ -19,9 +19,6 @@ const CategorySection = ({activeCategory, setTypeCategory}) => {
       
         },
         {
-            Name:'Review',
-        },
-        {
             Name:'Highest Ratings'
         },
     ]
