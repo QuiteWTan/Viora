@@ -17,10 +17,8 @@ body{
     padding: 0;
 }
 
-.grid-container {
+.grid-cols-cart1 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-auto-rows: repeat(auto-fit, minmax(200px, 1fr)); /* Rows will adjust based on the content */
-  gap: 10px; /* Adjust the gap between grid items as needed */
+  grid-template-columns: minmax(200px, 800px) minmax(100px, 400px);
 }
 

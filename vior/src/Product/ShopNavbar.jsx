@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { CartState } from "../Context/Context";
-
+import { Link } from "react-router-dom";
 const ShopNavbar = () => {
     const {
         state:{Cart},
@@ -24,15 +24,17 @@ const ShopNavbar = () => {
                             </div>
                             <input type="text" className="bg-transparent w-[80%] px-2 outline-none" placeholder="Search Furniture Here"/>
                         </div>
-                        <div className="flex items-center gap-x-4">
-                            <div className="rounded-full px-3 py-2 bg-white relative">
-                                <box-icon name='shopping-bag' ></box-icon>
-                                <div className="w-4 h-4 rounded-full p-1 bg-gray-400 absolute bottom-2 right-2 flex items-center justify-center text-white text-[10px] font-bold">{cartItem}</div>
+                        <Link to={'/cart'}>
+                            <div className="flex items-center gap-x-4">
+                                <div className="rounded-full px-3 py-2 bg-white relative">
+                                    <box-icon name='shopping-bag' ></box-icon>
+                                    <div className="w-4 h-4 rounded-full p-1 bg-gray-400 absolute bottom-2 right-2 flex items-center justify-center text-white text-[10px] font-bold">{cartItem}</div>
+                                </div>
+                                <div className="rounded-full px-3 py-2 bg-white">
+                                    <box-icon name='user' ></box-icon>
+                                </div>
                             </div>
-                            <div className="rounded-full px-3 py-2 bg-white">
-                                <box-icon name='user' ></box-icon>
-                            </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
                 <div className="w-full md:hidden flex justify-center px-8 py-2">
@@ -44,9 +46,9 @@ const ShopNavbar = () => {
                     </div>
                 </div>
                 <div className="w-full flex justify-center text-gray-500 ">
-                    <ul className="hover:bg-gray-200 duration-300 transition-all py-4 text-lg md:text-sm md:py-2 px-4 md:px-12">Home</ul>
-                    <ul className="hover:bg-gray-200 duration-300 transition-all py-4 text-lg md:text-sm md:py-2 px-4 md:px-12">Order</ul>
-                    <ul className="hover:bg-gray-200 duration-300 transition-all py-4 text-lg md:text-sm md:py-2 px-4 md:px-12">Account</ul>
+                    <Link to='/shop' className="hover:bg-gray-200 duration-300 transition-all py-4 text-lg md:text-sm md:py-2 px-4 md:px-12">Home</Link>
+                    <Link to='/shop' className="hover:bg-gray-200 duration-300 transition-all py-4 text-lg md:text-sm md:py-2 px-4 md:px-12">Order</Link>
+                    <Link to='/shop' className="hover:bg-gray-200 duration-300 transition-all py-4 text-lg md:text-sm md:py-2 px-4 md:px-12">Account</Link>
                 </div>
             </header>
         </>

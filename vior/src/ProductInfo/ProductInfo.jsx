@@ -172,7 +172,7 @@ const ProductInfo = () => {
             <div className="w-full flex justify-center items-center py-20 pb-28 md:py-10 px-6 md:px-2">
                 <div className="flex flex-col md:flex-row max-w-[1300px] justify-center py-10 gap-8 ">   
 
-                    <div className="flex flex-col  gap-4 max-w-[600px] ">
+                    <div className="flex flex-col  gap-4 max-w-[550px] ">
                         <div className="border-2 border-gray-400 p-2 rounded-md w-full h-[350px] relative ">
                             <img src={mainImage} alt="" className="w-full h-full "/>
                         </div>  
