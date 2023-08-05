@@ -7,7 +7,7 @@ const ProductPage = ( ) => {
     return(
         <div className="">
            <ShopNavbar/> 
-            <div className="w-full flex justify-center items-center px-4">
+            <div className="w-full flex justify-center items-center px-1 md:px-4">
                 <ProductSection/>
             </div>
         </div>

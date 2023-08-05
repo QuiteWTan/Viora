@@ -9,17 +9,17 @@ const ProductCard = ({Product}) => {
     return(
         <div className="flex flex-col shadow-xl rounded-md border">
             <img src={Product.Image} alt="" className='w-full h-[80%] p-2 border' style={{objectFit:"contain"}}/>
-            <div className='px-3 py-1'>
-                <div className='flex justify-between'>
+            <div className='px-2 md:px-3 py-1'>
+                <div className='flex md:flex-row flex-col justify-between pb-2 md:pb-0 '>
                     <h1 className='font-ysa text-gray-400'>{Product.Type}</h1>
                     <Rating Ratings={Product.ratings} Valid = {true} Color={'#F4D160'} />
                 </div>
-                <div className='flex flex-row justify-between text-slate-600 font-poppins font-bold text-xs md:text-sm'>
+                <div className='flex flex-col sm:flex-row justify-between text-slate-600 font-poppins font-bold text-xs md:text-sm'>
                     <h1>{Product.Name}</h1>
                     <h1>$ {Product.price}</h1>
                 </div>
                 
-                <div className='pt-6 font-poppins text-[12px] flex flex-row justify-between'>
+                <div className='pt-2 md:pt-6 font-poppins text-[12px] flex flex-col sm:flex-row justify-between'>
                     <div>
                         <h1 className='text-gray-400'>Fast Delivery :</h1>
                         <h1 className={` font-bold ${Product.fastDelivery? 'text-green-600' : 'text-red-600'}`}>{Product.fastDelivery? 'Available' : 'Unavailable'}</h1>

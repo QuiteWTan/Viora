@@ -14,7 +14,7 @@ const ShopNavbar = () => {
             <header className="w-full flex flex-col shadow-md ">
                 <div className="w-full py-4 px-2 md:px-4 flex justify-between flex-row bg-slate-200">
                     <div className="flex flex-row items-center justify-between w-full px-6">
-                        <div className="flex flex-row items-center  px-4 md:px-12">
+                        <div className="flex flex-row items-center  px-2 sm:px-4 md:px-12">
                             <box-icon type='solid' name='cookie' size ="md"></box-icon>
                             <h1 className="text-4xl font-ysa font-bold mb-1 px-1">Vior</h1>
                         </div>

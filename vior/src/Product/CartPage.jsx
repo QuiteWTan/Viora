@@ -3,7 +3,7 @@ import { CartState } from "../Context/Context"
 import ShopNavbar from "./ShopNavbar"
 import '../index.css'
 import Faker from "faker";
-
+import Swal from "sweetalert2";
 const generateTransactionId = () => {
     const randomId = Faker.datatype.number({ min: 1000000000, max: 9999999999 });
     return randomId.toString();
@@ -20,45 +20,63 @@ const CartPage = () => {
     
     const {
         state:{Cart},
+        dispatch
     } = CartState()
 
     const transactionId = generateTransactionId();
+    const RenderPurchaseNotification = () => {
+        Swal.fire({
+            icon: 'info',
+            title: 'Confirm Purchase',
+            text: 'Are You Sure With Your Purchase?',
+            showCancelButton: true,
+            confirmButtonColor: '#3cb371',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Confirm'
+        }).then((result) => {
+            if (result.isConfirmed) {
+            Swal.fire(
+                'Confirmed!',
+                'Thank You For Your Purchase',
+                'success'
+            );
+            dispatch({ type: "EMPTY_CART" });
+            }
+        })
+    }
     return(
         <div>
             <ShopNavbar/>
             <div className='w-full flex flex-col items-center justify-center bg-slate-50' name='FirstHomeSection'>
-                <div className='flex grid-cols-cart1 max-w-[1200px]'>
+                <div className='flex  w-full justify-center'>
                     {
                         Cart.length === 0 ? 
-                        <div className='max-w-[1200px] py-28 col-span-2 '>
-                            <div className="bg-white py-40 w-full flex justify-center items-center border-2 shadow-md">
-                                <h1 className="text-3xl text-gray-400 font-Robot">Your Cart is Empty ! Fill'em Up !</h1>
+                        <div className='max-w-[1300px] py-28 col-span-2 '>
+                            <div className="bg-white py-40 w-full flex justify-center items-center border-2 shadow-md px-24 ">
+                                <h1 className="md:text-3xl text-gray-400 font-Robot">Your Cart is Empty ! Fill'em Up !</h1>
                             </div>
                         </div>
                         :
-                        <div className='flex grid-cols-cart1 max-w-[1200px] py-10 px-8 md:px-12  gap-12 col-span-2 font-Robot'>
+                        <div className='grid grid-cols-feat md:grid-cols-cart1 max-w-[1300px] py-10 px-4 lg:px-12  gap-12 col-span-2 font-Robot'>
                             <div className="flex flex-col">
-                                <h1 className="font-poppins font-bold text-xl pb-2">Order Summary </h1>
-                                <div className=" bg-white rounded-md flex flex-col p-4 shadow-md border-2 px-6 w-full gap-8">
+                                <h1 className="font-poppins font-bold text-2xl md:text-xl pb-2">Order Summary </h1>
+                                <div className=" bg-white rounded-md flex flex-col p-4 shadow-md border-2 w-full gap-6">
                                 {Cart.map((item) => (
-                                    <div className="flex flex-row items-center gap-4 justify-between w-full" key={item.id}>
-                                        <div className="flex flex-row items-center gap-4  text-sm ">
+                                    <div className="flex flex-row justify-between w-full pb-4 border-b-2 border-gray-200" key={item.id}>
+                                        <div className="flex flex-row gap-4  text-sm ">
                                             <div className="shadow-md border p-2">
-                                                <img src={item.Image} alt="" className="w-[100px] h-[80px]"/>
+                                                <img src={item.Image} alt="" className="w-[120px] h-[100px]"/>
                                             </div>
                                             <div>
-                                                <h3 className="font-bold text-xl">{item.Name}</h3>
-                                                <p className="text-gray-400">Price:<span className="font-bold text-black"> $ {item.price}</span></p>
-                                                <p className="text-gray-400">Type: <span className="font-bold text-black">{item.Type}</span></p>
+                                                <h3 className="font-bold text-2xl text-gray-700">{item.Name}</h3>
+                                                <p className="text-gray-400">Type: <span className="font-bold text-gray-600">{item.Type}</span></p>
+                                                <p className="text-gray-400">Price:<span className="font-bold text-gray-600"> $ {item.price}</span></p>
+                                                <p className="text-gray-400">Quantity: <span className="font-bold text-gray-600">{item.qty}</span></p>
+                                                <p className="text-gray-400">Size: <span className="font-bold text-gray-600">{item.size}</span></p>
                                             </div>
                                         </div>
-                                        <div className=" flex flex-col items-center">
-                                            <h1 className="text-gray-400 ">Total Price: </h1>
-                                            <h1 className="text-lg font-bold">$ {item.price * item.qty}</h1>
-                                        </div>
-                                        <div className="flex flex-row items-center gap-x-4">
-                                            <h1 className="text-gray-400">Quantity: <span className="font-bold text-black">{item.qty}</span></h1>
-                                            <h1 className='w-12 h-12 flex items-center justify-center font-bold rounded-sm shadow-md border'>{item.size}</h1>
+                                        <div className=" flex flex-col items-center justify-center">
+                                            <h1 className="text-3xl font-bold text-gray-500">$ {item.price * item.qty}</h1>
                                         </div>
                                     </div> 
                                 ))
@@ -66,7 +84,7 @@ const CartPage = () => {
                             </div>
                         </div>
                         <div className="flex flex-col">
-                            <h1 className="font-poppins font-bold text-xl pb-2">Payment Details </h1>
+                            <h1 className="font-poppins font-bold text-2xl md:text-xl pb-2">Payment Details </h1>
                             <div className="max-w-[600px] bg-white rounded-md flex flex-col p-4 px-6 shadow-md border-2 justify-between gap-6">
                                 <h1 className="py-1 text-center font-bold font-Robot text-lg text-gray-600 bg-slate-300"> Summary</h1>
                                 <div className="flex flex-row justify-between font-bold font-poppins items-center text-gray-400">
@@ -95,7 +113,7 @@ const CartPage = () => {
                                 <div className="w-full">
                                     <hr className="w-full h-2  border-gray-400"/>
                                 </div>
-                                <button className="text-white bg-slate-400 px-4 py-2 hover:bg-slate-500 transition-all duration-300 rounded-sm">Confirm Purchase</button>
+                                <button className="text-white bg-slate-400 px-4 py-2 hover:bg-slate-500 transition-all duration-300 rounded-sm" onClick={() => RenderPurchaseNotification()}>Confirm Purchase</button>
                             </div> 
                         </div>
                     </div>
