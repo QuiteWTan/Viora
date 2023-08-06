@@ -1,4 +1,4 @@
-import LoginBG from '../assets/Login/LoginBG.jpg'
+import RegisterBG from '../LandingPage/assets/Home/Content4.jpg'
 import { useState } from 'react';
 import AnimatedInput from '../FormComponent/AnimatedInput';
 import { useNavigate } from 'react-router';
@@ -32,21 +32,19 @@ const RegisterPage = () => {
         [name]: value,
         }));
     };
-
     
-
     return(
-        <div className="w-full h-screen grid grid-cols-2 bg-slate-50">
-            <div className='w-full relative'>
-                <img src={LoginBG} alt="" className='w-full h-full absolute'/>
+        <div className="w-full  h-screen flex flex-row bg-slate-50">
+            <div className=' relative sm:w-1/6 md:w-1/4'>
+                <img src={RegisterBG} alt="" className='w-full h-full absolute'/>
             </div>
-            <div className='w-full h-full flex items-center flex-col pt-16 pb-20 justify-evenly px-24'>
-                <h1 className='text-4xl font-play font-bold'>Vior</h1>
+            <div className='w-full h-full flex items-center flex-col py-0 md:pt-16 md:pb-20 justify-evenly px-2  sm:px-12 md:px-8 lg:px-24 border-2'>
+                <h1 className=' text-5xl md:text-4xl font-play font-bold'>Vior</h1>
                 <div className='text-center'>
-                    <h1 className='text-2xl text-gray-500 font-bold font-poppins'>Welcome to Vior</h1>
-                    <p className='text-sm text-gray-400 font-Robot'>Transform your space with timeless elegance and exceptional craftsmanship, as we curate furniture that tells stories and creates cherished memories.</p>
+                    <h1 className='text-3xl sm:text-2xl text-gray-500 font-bold font-poppins'>Welcome to Vior</h1>
+                    <p className='text-xs md:text-sm text-gray-400 font-Robot py-4 lg:py-0 px-4 sm:px-8 md:px-0 hidden md:block max-w-[600px]'>Transform your space with timeless elegance and exceptional craftsmanship, as we curate furniture that tells stories and creates cherished memories.</p>
                 </div>
-                <div className='grid grid-cols-2 gap-y-5 gap-x-10'>
+                <div className='flex flex-col md:grid md:grid-cols-2 gap-y-4 md:gap-y-5 gap-x-10'>
                     <div className='flex flex-row justify-center items-center w-full'>
                         <AnimatedInput type={'text'} name='Username' iconName='user' handleChange={handleChanges} values1={formValues.Username}/>
                     </div>
@@ -95,6 +93,9 @@ const RegisterPage = () => {
                         <h1>Already have an account? <a href="" className='font-bold underline' onClick={() => Nav('/login')}>Sign In now.</a></h1>
                     </div>
                 </div>
+            </div>
+            <div className=' relative sm:w-1/6 md:w-1/4'>
+                <img src={RegisterBG} alt="" className='w-full h-full absolute'/>
             </div>
         </div>
     )

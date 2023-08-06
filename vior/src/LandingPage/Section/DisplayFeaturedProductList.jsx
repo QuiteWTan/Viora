@@ -1,7 +1,7 @@
 const FeaturedProduct = ({ Data }) => {
 
     return (
-        <div className='w-full h-full grid grid-cols-2 gap-x-2 grid-rows-feat2 md:grid-cols-feat md:grid-rows-feat1 md:gap-x-5 gap-y-8 '>
+        <div className='w-full h-full grid grid-cols-2 gap-x-2 grid-rows-feat2 md:grid-cols-feat1 md:grid-rows-feat1 md:gap-x-5 gap-y-8 '>
             {
             Data.map((data,index) => (
                 <div className='w-full h-full rounded-md overflow-hidden ' key={index}>

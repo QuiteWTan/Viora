@@ -15,7 +15,7 @@ const AnimatedInput = ({type,name,iconName,iconType,handleChange,value}) => {
   };
 
   return (
-    <div className={`relative py-2 px-4 border rounded-sm focus:outline-none transition-colors flex flex-row items-center justify-between w-full${
+    <div className={`relative py-2 px-4 border rounded-sm focus:outline-none transition-colors flex flex-row items-center justify-between w-full ${
       isFocused ? 'border-gray-500' : 'border-gray-300'
     }`}>
       <input
