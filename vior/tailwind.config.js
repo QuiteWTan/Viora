@@ -20,7 +20,8 @@ export default {
 
         'feat': 'minmax(300px, 500px)',
         'feat1': 'repeat(4, minmax(150px, 250px))',
-        'cart1': 'minmax(200px, 750px) minmax(100px, 350px)'
+        'cart1': 'minmax(200px, 750px) minmax(100px, 350px)',
+        'stretch' : 'minmax(300px, 1200px)'
       },
       gridTemplateRows: {
         

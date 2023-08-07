@@ -9,6 +9,7 @@ import ProductPage from './Product/ProductPage'
 import Blog from './ResourcesPage/BlogPage'
 import ProductInfo from './ProductInfo/ProductInfo'
 import CartPage from './Product/CartPage'
+import HelpCenterPage from './ResourcesPage/HelpCenterPage'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/blog" element = {<Blog/>}/>
         <Route path="/product" element = {<ProductInfo/>}/>
         <Route path="/cart" element = {<CartPage/>}/>
+        <Route path="/help" element = {<HelpCenterPage/>}/>
       </Routes>
     </Router>
   );

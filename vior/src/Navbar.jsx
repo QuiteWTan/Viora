@@ -1,6 +1,6 @@
 import 'boxicons';
 import { useState } from 'react';
-import { Link} from 'react-scroll'
+import { Link} from 'react-router-dom'
 import Profile from '../src/assets/Profile.png'
 import {  useNavigate } from "react-router-dom";
 
@@ -35,12 +35,12 @@ const Navbar = () => {
     const NavStyle = ['fixed z-10 w-[300px] top-0 left-0 h-screen bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300 bg-white','fixed top-0 z-10 left-[-73px] md:left-0 h-full w-[73px] h-screen bg-[#ffff4] pt-4 pb-2 shadow-md text-gray-600 px-2 transition-width duration-300 bg-white']
 
     const NavListTop = [
-    {   
-        icon: <box-icon type='solid' name='grid-alt'></box-icon> ,
-        name : "Home"        ,
-        HoverName : "Home",
-        link:"/"
-    },
+        {   
+            icon: <box-icon type='solid' name='grid-alt'></box-icon> ,
+            name : "Home"        ,
+            HoverName : "Home",
+            link:"/"
+        },
         {
             icon: <box-icon name='buildings'></box-icon> ,
             name : "Shop"    ,
@@ -51,9 +51,10 @@ const Navbar = () => {
             Sub2: "Bath room",
             Sub3 : "Bed room",
             Sub4 : "Dining room", 
-            Sub1Link:"/",
-            Sub2Link:"/",
-            Sub3Link:"/"
+            Sub1Link:"/shop",
+            Sub2Link:"/shop",
+            Sub3Link:"/shop",
+            Sub4Link:"/shop"
         },
         {
             icon: <box-icon name='user-pin'></box-icon> ,

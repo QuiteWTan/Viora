@@ -22,7 +22,7 @@ const ShopNavbar = () => {
                             <div className="border-gray-400 border-r flex items-center justify-center px-1">
                                 <box-icon name='search-alt-2' className color='gray'></box-icon>
                             </div>
-                            <input type="text" className="bg-transparent w-[80%] px-2 outline-none" placeholder="Search Furniture Here"/>
+                            <input type="text" className="bg-transparent w-[80%] px-2 outline-none" placeholder="Search"/>
                         </div>
                         <Link to={'/cart'}>
                             <div className="flex items-center gap-x-4">
@@ -46,9 +46,9 @@ const ShopNavbar = () => {
                     </div>
                 </div>
                 <div className="w-full flex justify-center text-gray-500 ">
-                    <Link to='/shop' className="hover:bg-gray-200 duration-300 transition-all py-4 text-lg md:text-sm md:py-2 px-4 md:px-12">Home</Link>
-                    <Link to='/shop' className="hover:bg-gray-200 duration-300 transition-all py-4 text-lg md:text-sm md:py-2 px-4 md:px-12">Order</Link>
-                    <Link to='/shop' className="hover:bg-gray-200 duration-300 transition-all py-4 text-lg md:text-sm md:py-2 px-4 md:px-12">Account</Link>
+                    <Link to='/' className="hover:bg-gray-200 duration-300 transition-all py-4 text-lg md:text-sm md:py-2 px-4 md:px-12">Home</Link>
+                    <Link to='/shop' className="hover:bg-gray-200 duration-300 transition-all py-4 text-lg md:text-sm md:py-2 px-4 md:px-12">Shop</Link>
+                    <Link to='/help' className="hover:bg-gray-200 duration-300 transition-all py-4 text-lg md:text-sm md:py-2 px-4 md:px-12">Help Center</Link>
                 </div>
             </header>
         </>
