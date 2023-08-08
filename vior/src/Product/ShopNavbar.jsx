@@ -49,6 +49,7 @@ const ShopNavbar = () => {
                     <Link to='/' className="hover:bg-gray-200 duration-300 transition-all py-4 text-lg md:text-sm md:py-2 px-4 md:px-12">Home</Link>
                     <Link to='/shop' className="hover:bg-gray-200 duration-300 transition-all py-4 text-lg md:text-sm md:py-2 px-4 md:px-12">Shop</Link>
                     <Link to='/help' className="hover:bg-gray-200 duration-300 transition-all py-4 text-lg md:text-sm md:py-2 px-4 md:px-12">Help Center</Link>
+                    <Link to='/help' className="hover:bg-gray-200 duration-300 transition-all py-4 text-lg md:text-sm md:py-2 px-4 md:px-12">Terms & Policy</Link>
                 </div>
             </header>
         </>

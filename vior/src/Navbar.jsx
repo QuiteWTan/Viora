@@ -88,7 +88,7 @@ const Navbar = () => {
             Type:true,    
             HoverName : "Categories",
             Sub1: "Terms & Policy",
-            Sub2 : "Promo",
+            Sub2 : "About Us",
         }
     ]
 

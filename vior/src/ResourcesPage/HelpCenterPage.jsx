@@ -94,17 +94,17 @@ const HelpCenterPage = () => {
                 </div>
 
                 <div className="w-full flex justify-center py-6 px-4 bg-slate-50">
-                    <div className="flex flex-col max-w-[1200px] justify-center">
+                    <div className="flex flex-col max-w-[1200px] justify-center overflow-hidden">
                         <div>
                             <h1 className="text-xl font-poppins py-4 font-bold"> Frequently Asked Questions</h1>
-                            <div className="flex flex-col md:flex-row gap-16">
-                                <ul className="flex flex-row md:flex-col gap-4">
+                            <div className="flex flex-col md:flex-row gap-4 md:gap-16">
+                                <ul className="grid grid-cols-1 sm:grid-cols-2 md:flex md:flex-col gap-4">
                                 {tabs.map((item) => (
                                     <li
-                                    className={`text-gray-400 py-3 w-[250px]  ${item.title === selectedTab.title ? "text-gray-600 font-bold" : ""} `}
+                                    className={`text-gray-400 py-6 md:py-4 w-full md:w-[250px]  ${item.title === selectedTab.title ? "text-gray-600 font-bold" : ""} `}
                                     onClick={() => setSelectedTab(item)}
                                     >
-                                    {`${item.title}`}
+                                    <h1 className="text-sm md:text-md">{`${item.title}`}</h1>
                                     
                                     {item.title === selectedTab.title ? (
                                         <motion.div className="underline" layoutId="underline" />
@@ -112,7 +112,7 @@ const HelpCenterPage = () => {
                                     </li>
                                 ))}
                                 </ul>
-                                <div className="overflow-hidden bg-white shadow-md border p-6">
+                                <div className="overflow-hidden bg-white shadow-md border p-4 md:p-6">
                                     <AnimatePresence>
                                         <motion.div
                                             key={selectedTab ? selectedTab.Content : "empty"}
@@ -121,9 +121,9 @@ const HelpCenterPage = () => {
                                             exit={{ y: -10, opacity: 0 }}
                                             transition={{ duration: 0.3 }}
                                         >
-                                            <div className="max-h-[0px] max-w-[700px] font-poppins">
-                                                <h1 className="text-2xl font-bold pb-2 ">Answer</h1>
-                                                <h1 className="">{selectedTab ? selectedTab.Content : ''}</h1>
+                                            <div className="max-h-[800px] md:max-h-[0px] max-w-[700px] font-poppins">
+                                                <h1 className="text-lg md:text-2xl font-bold pb-2 ">Answer</h1>
+                                                <h1 className="text-xs sm:text-sm md:text-lg">{selectedTab ? selectedTab.Content : ''}</h1>
                                             </div>
                                         </motion.div>
                                     </AnimatePresence>
