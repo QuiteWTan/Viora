@@ -46,7 +46,7 @@ const CartPage = () => {
     }
     return(
         <div>
-            <ShopNavbar/>
+            <ShopNavbar showSearch={false}/>
             <div className='w-full flex flex-col items-center justify-center bg-slate-50' name='FirstHomeSection'>
                 <div className='flex  w-full justify-center'>
                     {

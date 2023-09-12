@@ -14,7 +14,7 @@ const FourthHomeSection = () => {
 
     const Image = [Blog1,Blog1,Blog1,Blog1,Blog1,Blog1,Blog1,Blog1,Blog1,Blog1,Blog1,Blog1]
     return(
-        <div className='w-full lg:h-screen flex flex-col justify-center items-center bg-slate-200' name='FourthHomeSection'>
+        <div className='w-full lg:h-screen flex flex-col justify-center items-center bg-slate-50' name='FourthHomeSection'>
             <div className='flex flex-col justify-center items-center py-10 px-2'>
                 <div className='max-w-[1100px] flex flex-col justify-center items-center gap-y-10'>
                     <h1 className='text-3xl text-gray-600 font-bold font-Robot'>Our History</h1>

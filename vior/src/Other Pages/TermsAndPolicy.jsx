@@ -57,7 +57,7 @@ const TermsAndPolicy = () => {
     ]
     return(
         <div>
-            <ShopNavbar/>
+            <ShopNavbar showSearch={false}/>
             <div className="w-full flex flex-col justify-center items-center py-8">
             <h1 className="font-bold text-2xl md:text-5xl font-Robot text-gray-600">Terms & Policy</h1>
                 <div className="w-full  flex justify-center py-6 px-6">

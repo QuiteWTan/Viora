@@ -9,8 +9,8 @@ const FeaturedProduct = ({ Data }) => {
                         <img src={data.Image} alt="" className='w-full h-full absolute'/>
                     </div>
                     <div className="p-2">
-                        <h1 className=' font-bold font-poppins text-gray-400'>{data.Name}</h1>
-                        <p className='text-sm font-poppins'><span className='line-through '>{data.BeforePrice}</span> {data.AfterPrice}</p>
+                        <h1 className=' font-bold font-poppins text-gray-500'>{data.Name}</h1>
+                        <p className='text-sm font-poppins font-bold'><span className='line-through font-normal'>{data.BeforePrice}</span> {data.AfterPrice}</p>
                     </div>
                 </div>
             ))

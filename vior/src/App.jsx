@@ -11,6 +11,7 @@ import ProductInfo from './ProductInfo/ProductInfo'
 import CartPage from './Product/CartPage'
 import HelpCenterPage from './ResourcesPage/HelpCenterPage'
 import TermsAndPolicy from './Other Pages/TermsAndPolicy'
+import AboutUs from './Other Pages/AboutUs'
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/cart" element = {<CartPage/>}/>
         <Route path="/help" element = {<HelpCenterPage/>}/>
         <Route path="/terms" element = {<TermsAndPolicy/>}/>
+        <Route path="/about" element = {<AboutUs/>}/>
       </Routes>
     </Router>
   );

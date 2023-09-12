@@ -1,5 +1,4 @@
-import Furn1 from '../assets/Home/Furni2.jpg'
-import Home2 from '../assets/Home/Content2.jpg'
+import Home2 from '../assets/Home/SecondHomeSection.png'
 import { HandleScroll } from './HandleScroll'
 const SecondHomeSection = () => {
     const SecondHomeList = [
@@ -43,12 +42,10 @@ const SecondHomeSection = () => {
                         </div>
                     </div>
 
-                    <div className='w-full pl-20 pt-10 relative text-center col-span-1'>
+                    <div className='w-full  relative text-center col-span-1'>
                         <div className='relative w-full h-full z-7'>
-                            <img src={Furn1} alt=""  className='absolute w-full h-full'/>
+                            <img src={Home2} alt=""  className='absolute w-full h-full'/>
                         </div>
-                        <img src={Home2} alt=""  className='absolute top-[-5%] left-[0px] w-44 h-44 z-[-1]'/>
-                        <img src={Home2} alt=""  className='hidden md:block absolute bottom-[-60px] right-[-10%] w-44 h-44 z-8'/>
                     </div>
                 </div>
             </div>

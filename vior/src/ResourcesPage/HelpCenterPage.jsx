@@ -63,9 +63,9 @@ const HelpCenterPage = () => {
         ]
     return(
         <div>
-            <ShopNavbar/>
+            <ShopNavbar showSearch={false}/>
             <div className="w-full flex flex-col justify-center">
-                <div className="w-full bg-gray-50 flex justify-center py-6 px-4">
+                <div className="w-full flex justify-center py-6 px-4">
                     <div className="flex flex-col max-w-[1200px] justify-center">
                         <div className="grid grid-cols-stretch gap-4 ">
                             <h1 className="text-4xl text-gray-500 font-ysa px-2">How can we help ? </h1>

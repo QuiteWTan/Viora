@@ -18,7 +18,6 @@ const FirstHomeSection = () => {
                         <p className="text-md lg:text-lg max-w-[600px] py-6 font-poppins">Transform your home into a summer oasis with our unbeatable furniture sale! Discover a wide selection of chic outdoor loungers, stylish patio sets, and refreshing indoor pieces at <span className='font-bold text-red-900 text-'> up to 60% off.</span> Elevate your living space with summer vibes—shop now and bask in the comfort of our exclusive deals!</p>
                         <div className='flex w-full items-start'>
                             <button className='py-3 text-lg text-white bg-slate-500 px-24 opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300'>Get Started</button>
-                            
                         </div>
                     </div>
                 </div>
