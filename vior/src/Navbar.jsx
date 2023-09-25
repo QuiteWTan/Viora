@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link} from 'react-router-dom'
 import Profile from '../src/assets/Login/LoginBG.jpg'
 import {  useNavigate } from "react-router-dom";
-
+import {AiOutlineMenu} from 'react-icons/ai'
 const Navbar = () => {
     const Nav = useNavigate();
     const [MenuIcon,setMenuIcon] = useState(false);
@@ -99,17 +99,17 @@ const Navbar = () => {
                 <div class='flex justify-between'>
                     <div class='flex flex-row items-center px-2 py-2 '>
                         <box-icon type='solid' name='cookie' size ="lg"></box-icon>
-                        <h1 class={'font-play text-4xl font-bold px-2 text-black'}>{MenuIcon ? 'Vior' : ''}</h1>
+                        <h1 class={'font-play text-4xl font-bold px-2 text-black delay-200'}>{MenuIcon ? 'Vior' : ''}</h1>
                     </div>
                     
-                    {/* <div onClick={() => ClearDropDown()}>
+                    <div onClick={() => ClearDropDown()}>
                         {
                         MenuIcon ? 
                         <box-icon name='x'></box-icon> 
                         : 
-                        <box-icon name='menu' ></box-icon>
+                        <AiOutlineMenu className='w-5 h-5 font-bold'></AiOutlineMenu>
                         }
-                    </div> */}
+                    </div>
                 </div>
                 <div class='flex flex-col justify-between h-full '>
                     <div class='py-3 flex flex-col'>

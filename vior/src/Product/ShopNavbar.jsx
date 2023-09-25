@@ -5,7 +5,9 @@ const ShopNavbar = ({showSearch}) => {
     const {
         state:{Cart},
     } = CartState()
-    const[cartItem,setCartItem] = useState(0)
+    
+    const[cartItem,setCartItem] = useState(0);
+
     useEffect(() => {
         setCartItem(Cart.length)
       }, [Cart]);
