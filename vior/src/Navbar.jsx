@@ -77,8 +77,8 @@ const Navbar = () => {
             HoverName : "Resources" ,
             Sub1: "Help Center",
             Sub2 : "blog",
-            Sub1Link:"/",
-            Sub2Link:"/",
+            Sub1Link:"/help",
+            Sub2Link:"/blog",
         },
         {
             icon: <box-icon name='category' ></box-icon> ,
@@ -88,8 +88,8 @@ const Navbar = () => {
             HoverName : "Categories",
             Sub1: "Terms & Policy",
             Sub2 : "About Us",
-            Sub1Link:"/",
-            Sub2Link:"/",
+            Sub1Link:"/terms",
+            Sub2Link:"/about",
         }
     ]
 
